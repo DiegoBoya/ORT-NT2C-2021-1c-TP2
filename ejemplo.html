@@ -6,11 +6,31 @@
             console.log("Hola!")
 
             let nombres = ['Adriana', 'Benito', 'Claudia', 'Daniel', 'Estefania', 'Fernando','Gabriela','Hugo']
-            nombres.forEach(function(nombre) {
-                console.log(nombre)
+            console.log(nombres)
+            
+
+            function deStringAObjeto(nombres){
+            const nuevoArray = [];
+            nombres.forEach(function(elemento) {
+                
+                const miObjeto = {
+                    name: elemento,
+                    longitud: elemento.length
+                }
+                nuevoArray.push(miObjeto)
             }
             )
+            return nuevoArray;
+        }
+            const arrayDeObjetos =  deStringAObjeto(nombres);
+            console.log(arrayDeObjetos);
+
+            console.log( JSON.stringify(arrayDeObjetos));
+
+            
+
 
         </script>
     </body>
 </html>
+
